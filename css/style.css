@@ -13,7 +13,7 @@ html,body {width:100%;height:100%;overflow-x:hidden;word-break:break-all;-webkit
 @media (min-width: 640px){html{font-size: 85.3333px;} }
 @media (min-width: 750px){html{font-size: 100px;} }
 .Width1200{max-width: 1200px;margin: 0 auto;}
-body { margin: 0; padding: 0; font-size: 16px;  font-family: "微软雅黑"; color: #333; line-height: 180%; border: none; }
+body { margin: 0; padding: 0; font-size: 16px;  font-family: "微软雅黑"; color: #333; line-height: 180%; border: none; position: relative;}
 *:focus{outline:0px}
 i { font-style:normal; }
 ul,li{list-style:none;padding: 0;margin: 0;}
@@ -43,7 +43,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color:rgba(0,0
 }
 /************************************index*******************************************************************/
 
-.WapMask{display: none;}
+.WapMask{display: none; position: fixed;height: 100%;width: 100%;background: #fff;z-index: 11;overflow: hidden;}
 .header_Computer{background: #252525;color: #fff;padding: 30px 40px;display: flex;justify-content: space-between;align-items: center;}
 .header_Computer .logo{font-weight: bold;font-size: 24px;width: 30%;}
 .header_Computer .tab{display: flex;justify-content: space-between;width: 50%;margin-right: 40px;}
@@ -52,8 +52,8 @@ a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color:rgba(0,0
 .header_Computer .searchList{width: 25%;display: flex;justify-content: right;position: relative;align-items: center;background: #fff;border-radius: 30px;/*! margin-left: 100px; */}
 .header_Computer .searchList .btn{background:url('../images/h_2.png');width: 20px;height: 20px;background-size: 20px;position: absolute;left: 20px;}
 .header_Computer .searchList input{height: 10px;border-radius: 30px;border: 0;padding: 15px;margin-left: 40px;width: 346px;}
-.searchMask{display: none;}
-.header_Computer .searchMask{/*! display: none; */position: absolute;background: #fff;left: 5px;top: 38px;border-top: 1px solid #C4C5C4;width: 90%;border-radius: 0 0 30px 30px;padding: 5px 15px 10px;z-index: 11;}
+.searchMask{/*! display: none; */}
+.header_Computer .searchMask{display: none;position: absolute;background: #fff;left: 5px;top: 38px;border-top: 1px solid #C4C5C4;width: 90%;border-radius: 0 0 30px 30px;padding: 5px 15px 10px;z-index: 111;}
 .header_Computer .searchMask li{height: 40px;color: #000;font-size: 14px;line-height: 40px;display: flex;align-items: center;}
 .header_Computer .searchMask li::before{content:"";background:url('../images/h_7.png');width: 20px;height: 20px;display: inline-block;margin-right: 10px;}
 .header_Computer .searchMask li::after{content:"";background:url('../images/h_8.png');width: 15px;height: 15px;display: inline-block;margin-right: 10px;background-size: 15px;position: absolute;right: 6px;cursor: pointer;}
@@ -115,6 +115,30 @@ footer{background: #252525;color: #fff;}
 .footer2{}
 .footer_Wap{display: none;}
 .homeBanner_Wap{display: none;}
+/* .WapMask{ display: none;} */
+.header_Computer .searchMask {
+    display: block; /* 改为始终存在 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    /* 其他原有样式保持不变 */
+}
+
+.header_Computer .searchMask.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 添加搜索建议项的悬停动画 */
+.header_Computer .searchMask li {
+    transition: transform 0.2s ease;
+}
+
+.header_Computer .searchMask li:hover {
+    transform: translateX(8px);
+}
 /* @media (min-width:1780px) {
 } */
 @media (min-width: 769px) and (max-width: 1220px) { 
@@ -167,16 +191,20 @@ footer{background: #252525;color: #fff;}
     .header_Wap_r{display: flex;}
     .header_Wap_r li{margin: 0 .1rem;}
     .header_Wap_r li img{}
-    .WapMask .searchList{position: absolute;
-        background: #fff;
-        color: #000;
-        top: 1.2rem;
+    .searchM{background: #fff;height: .8rem;border-radius: 30px;display: flex;align-items: center;}
+    .WapMask .searchList{        color: #000;
         z-index: 11;
-        width: 100%;}
-    .WapMask .searchList .btn{}
-    .WapMask .searchList input{width: 100%;}
-    .WapMask ul{}
-    .WapMask ul li{}
+        width: 95%;
+background: #252525;
+padding: .2rem;
+}
+    .WapMask .searchList .btn{background: url('../images/h_2.png');background-size: auto;width: 20px;height: 20px;background-size: 20px;position: absolute;left: 20px;}
+    .WapMask .searchList input{width: 88%;height: 50%;border-radius: 30px;border: 0;padding: .2rem;margin-left: 30px;}
+    .WapMask > ul{padding: .3rem .4rem;padding-bottom: 3rem;border-bottom: 1px solid #E5E7EB;}
+    .WapMask > ul h2{margin: 0;font-size: 14px;margin-bottom: .1rem;}
+    .WapMask > ul li{font-size: 14px;display: flex;align-items: center;height: .7rem;line-height: .7rem;}
+    .WapMask > ul li::before{content:"";background:url('../images/h_7.png');width: .3rem;height: .3rem;display: inline-block;margin-right: .2rem;background-size: .3rem;position: relative;top: .03rem;}
+    .WapMask > ul li::after{content:"";background:url('../images/h_8.png');width: .3rem;height: .3rem;display: inline-block;margin-right: .2rem;background-size: .3rem;position: absolute;right: .06rem;cursor: pointer;}
     .homeBanner_Wap{background: url('../images/hWapBanner.png');position: relative;height: 8rem;background-size: 3.9rem 5.2rem;background-size: cover;background-position: center;}
     .homeBanner_Wap h2{margin: 0;color: #fff;font-size: 28px;line-height: 40px;}
     .homeBanner_Wap p{font-size: 16px;}
@@ -205,7 +233,7 @@ footer{background: #252525;color: #fff;}
     .titleM{margin: 0;}
     .titleM h2{font-size: 18px;}
     .titleM p{}
-    .ProList ul{flex-wrap: wrap;width:margin: 0 -.1rem;justify-content: center;}
+    .ProList ul{flex-wrap: wrap;margin: 0 -.1rem;justify-content: center;}
     .ProList ul li{width: 47.1%;margin: 0 .1rem;}
     .ProList ul li:nth-child(3),.ProList ul li:nth-child(4){display: none;}
     .ProList ul li h2{font-size: 14px;}
@@ -219,4 +247,30 @@ footer{background: #252525;color: #fff;}
     .footer_Wap_t_b h2{font-size: 24px;margin: .2rem 0;}
     .footer_Wap_t_b li{margin: 0 .1rem;}
     .footer_Wap_t_b li img{}
+    .bomList{padding: .4rem;}
+    .bomList > h2{font-size: 18px;margin: 0 0 .2rem;}
+    .bomList > ul{display: flex;margin: 0 -.1rem;width: 9rem;}
+    .bomList > ul li{/*! width: 100%; */margin: 0 .1rem;}
+    .bomList > ul li img{width: 100%;}
+    .bomList > ul li h2{margin: 0;font-size: 14px;font-weight: normal;}
+    .bomList .bom{}
+    .bomList .priceM{display: flex;align-items: center;}
+    .bomList .priceL{font-size: 16px;margin-right: .1rem;font-weight: bold;}
+    .bomList .priceR{font-size: 12px;margin-right: .1rem;color: #999;text-decoration: line-through;}
+    .bomList .disco{font-size: 14px;color: #FF3333;background: #ffeaea;border-radius: .2rem;padding: 0 .1rem;height: .3rem;line-height: .3rem;font-size: 12px;}
+    .header_Wap {
+        position: relative;
+        z-index: 101; /* 确保按钮在菜单上方 */
+    }
+    
+    /* 修改菜单动画 */
+    .WapMask {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .WapMask.active {
+        transform: translateX(0);
+    }
+    
 }
