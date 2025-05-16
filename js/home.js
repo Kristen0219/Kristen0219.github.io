@@ -27,9 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 /*手机js*/
+/*搜索*/
 document.addEventListener('DOMContentLoaded', function() {
     // 移动端菜单切换功能
-    const menuButton = document.querySelector('.header_Wap .header_Wap_l li:first-child img');
+    const menuButton = document.querySelector('.header_Wap .header_Wap_l li:nth-child(2) img');
     const wapMask = document.querySelector('.WapMask');
     
     if (menuButton && wapMask) {
@@ -44,4 +45,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     }
+    /*菜单*/
+    const menuButton1 = document.querySelector('.header_Wap .header_Wap_l li:nth-child(1)');
+    const menu = document.querySelector('.wapList');
+    const mask = document.querySelector('.menu_mask');
+
+    // 切换菜单
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        mask.classList.toggle('active');
+    }
+
+    // 菜单按钮点击
+    menuButton1.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // 点击遮罩关闭
+    mask.addEventListener('click', function() {
+        toggleMenu();
+    });
+
+    // 点击菜单项关闭
+    menu.querySelectorAll('li').forEach(item => {
+        item.addEventListener('click', function() {
+            toggleMenu();
+        });
+    });
 });
