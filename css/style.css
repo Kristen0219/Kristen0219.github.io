@@ -68,6 +68,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color:rgba(0,0
 .homeBanner_l{color: #fff;
 margin-top: 100px;
 }
+.WapCateMask{display: none;}
 .homeBanner_l h2{margin: 0;font-size: 32px;line-height: 60px;}
 .homeBanner_l p{}
 .homeBanner_l .btn{width: 84%;color: #000;background: #ffff;text-align: center;border-radius: 40px;height: 48px;line-height: 48px;margin-top: 80px;}
