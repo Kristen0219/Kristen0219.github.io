@@ -362,6 +362,7 @@ footer{background: #252525;color: #fff;}
     /*! margin: 0 auto; */
     padding: 30px;
 }
+.form-container form{overflow: hidden;}
 .form-group {
     margin-bottom: 10px;
 }
@@ -371,7 +372,7 @@ footer{background: #252525;color: #fff;}
     font-size: 14px;
 }
 .form-group input, .form-group select {
-    width: 100%;
+    width: 94%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -381,7 +382,7 @@ footer{background: #252525;color: #fff;}
 .phone-container {
     display: flex;
     align-items: center;
-    width: 103%;
+    width: 97%;
 }
 .phone-container select {
     /*! margin-right: 10px; */
@@ -394,11 +395,11 @@ footer{background: #252525;color: #fff;}
 .billing-address {
     display: flex;
     flex-direction: column;
-    width: 103%;
+    width: 97%;
     border: 1px solid #ddd;
     border-radius: 10px;
 }
-.cardDList{border: 1px solid #ddd;border-radius: 10px;width: 103%;border-bottom: 0;}
+.cardDList{border: 1px solid #ddd;border-radius: 10px;width: 97%;border-bottom: 0;}
 .cardDList_t{font-size: 14px;color: #6B7280;padding: 10px 20px;}
 .cardDList_b{display: flex;}
 .cardDList_b input{}
@@ -406,6 +407,7 @@ footer{background: #252525;color: #fff;}
 .addCardMaskList_b_b2:hover{background: #25252533;
     color: #0052D9;}
 .cartWapAddList{display: none;}
+.form-group select{width: 100%;}
 /* @media (min-width:1780px) {
 } */
 @media (min-width: 769px) and (max-width: 1220px) { 
@@ -785,6 +787,7 @@ justify-content: center;
     .cartWapAddList_btn{background: #0052D9;color: #fff;height: 1rem;line-height: 1rem;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: .2rem;margin-top: .2rem;display: inline-block;width: 100%;}
     .wapCartList1{}
     .form-container {padding: 0;
+width: 100%;
     }
     .form-group {
     }
@@ -801,6 +804,20 @@ justify-content: center;
     }
     .billing-address {
     }
+    .form-container form {
+        overflow: initial;
+      }
     .Wap_Xian{height: .1rem;width: 40%;background: #000;border-radius: 20px;margin: 0 auto;margin-top: .3rem;margin-bottom: .2rem;}
     .form_group_btn{background: #0052D9;color: #fff;height: 1rem;line-height: 1rem;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: .2rem;margin-top: .4rem;display: inline-block;width: 100%;}
+    .wapShopSuccess{}
+    .wapShopSuccess .icon{display: flex;align-items: center;justify-content: center;margin-top: 1.5rem;}
+    .wapShopSuccess .icon img{}
+    .wapShopSuccess >h2{text-align: center;font-size: 20px;}
+    .ComCardMaskCon{}
+    .ComCardMaskCon_t_l{}
+    .ComCardMaskCon_t_r{}
+    .ComCardMaskCon_b{padding: .4rem;margin-bottom: 3rem;}
+    .addCardMaskList_b{}
+    .addCardMaskList_b_b1{height: 1rem;line-height: 1rem;margin-top: 0;margin-bottom: .2remauto;}
+    .addCardMaskList_b_b2{height: 1rem;line-height: 1rem;margin-bottom: .2rem;}
 }
