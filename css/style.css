@@ -272,6 +272,7 @@ footer{background: #252525;color: #fff;}
 .shopDetailsM_r{}
 .shopDetailsM_r .checkBtn{background: #0052D9;color: #fff;height: 48px;line-height: 48px;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: 10px;margin-top: 20px;}
 .shopDetailsM_r .addBtn{height: 48px;border: 1px solid #0052D9;color: #0052D9;text-align: center;line-height: 48px;border-radius: 30px;margin-bottom: 10px;}
+.shopDetailsM_r .addBtn:hover{background: #25252533;color: #0052D9;}
 .shopDetailsM_l .prev{background: url('../images/details/i8.png');width: 30px;height: 30px;margin-bottom: 20px;}
 .shopDetailsM_l .next{background: url('../images/details/i9.png');width: 30px;height: 30px;margin-top: 20px;}
 .shopDetailsC{display: flex;margin-top: 80px;}
@@ -296,10 +297,10 @@ footer{background: #252525;color: #fff;}
 .ComCardMask .priceR{color: #999;text-decoration: line-through;margin-right: 10px;}
 .ComCardMask .disco{color: #FF3333;background: #ffeaea;border-radius: .2rem;padding: 0 10px;height: .3rem;line-height: .3rem;font-size: 16px;}
 .addCardMaskList_t_r p{margin: 0;}
-.addCardMaskList_t_r span{color: #408444;}
+.addCardMaskList_t_r span{color: #408444;font-weight: bold;}
 .addCardMaskList_b{}
 .addCardMaskList_b_b1{background: #0052D9;color: #fff;height: 48px;line-height: 48px;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: 10px;margin-top: 20px;}
-.addCardMaskList_b_b2{height: 48px;border: 1px solid #0052D9;color: #0052D9;text-align: center;line-height: 48px;border-radius: 30px;margin-bottom: 10px;}
+.addCardMaskList_b_b2{height: 48px;border: 1px solid #0052D9;color: #0052D9;text-align: center;line-height: 48px;border-radius: 30px;margin-bottom: 10px;width: 100%;display: inline-block;}
 .ComCardMaskList .icon{display: flex;justify-content: center;}
 .ComCardMaskList .icon img{}
 .ComCardMask{display: none;}
@@ -315,8 +316,96 @@ footer{background: #252525;color: #fff;}
     top: 20%;
     transform: translate(-50%);
 }
-/************************************about*******************************************************************/
-/***********************1*************contact*******************************************************************/
+.ComCardMaskCon{}
+.ComCardMaskCon_t{display: flex;margin-bottom: 10px;}
+.ComCardMaskCon_t_l{}
+.ComCardMaskCon_t_r{color: #666;display: flex;align-items: center;}
+.ComCardMaskCon_t_r::after{content:"";background: url('../images/checkbox/i1.png');width: 17px;height: 15px;display: inline-block;background-size: 17px;margin-left: 5px;}
+/************************************cart*******************************************************************/
+.CartList{display: flex;margin-bottom: 40px;}
+.CartList_l{border: 1px solid #ddd;border-radius: 20px;width: 70%;margin-right: 20px;}
+.CartList_l li{display: flex;border-bottom: 1px solid #ddd;padding: 30px;}
+.CartList_l .CartList_l_l{display: flex;align-items: center;margin: ;}
+.CartList_l .CartList_l_l img{width: 125px;height: 125px;margin-right: 20px;}
+.CartList_l .CartList_l_l_r{}
+.CartList_l .CartList_l_l_r h2{margin: 0;font-size: 18px;font-weight: normal;margin-bottom: 10px;}
+.CartList_l .CartList_l_l_r .bom{margin-top: 5px;display: flex;align-items: center;}
+.CartList_l .CartList_l_l_r .priceM{display: flex;align-items: center;}
+.CartList_l .CartList_l_l_r .priceL{font-size: 22px;font-weight: bold;margin-right: 10px;}
+.CartList_l .CartList_l_l_r .priceR{font-size: 22px;margin-right: 10px;color: #0000004D;}
+.CartList_l .CartList_l_l_r .disco{background: #FF33331A;color: #FF3333;padding: 5px 15px;border-radius: 30px;}
+.CartList_l .CartList_l_l_r p{/*! font-size: 24px; */margin: 0;line-height: 16px;}
+.CartList_l .CartList_l_l_r span{/*! font-size: 24px; */color: #408444;font-weight: bold;}
+.CartList_l .CartList_l_r{display: flex;align-items: center;justify-content: right;}
+.CartList_l .CartList_l_r .shopAdd{display: flex;background: #EFF3F8;display: flex;color: #252525;font-size: 20px;align-items: center;height: 45px;border-radius: 30px;width: 40%;}
+.CartList_l .CartList_l_r .shopAddBtn{width: 33.333%;text-align: center;font-size: 30px;cursor: pointer;padding: 0 10px;}
+.CartList_l .CartList_l_r .shopSubBtn{width: 33.333%;text-align: center;font-size: 30px;cursor: pointer;padding: 0 10px;}
+.CartList_l .CartList_l_r input{border: 0;width: 33.333%;text-align: center;font-size: 20px;background: transparent;}
+.CartList_l .CartList_l_r .del{display: flex;align-items: center;margin-left: 20px;}
+.CartList_l .CartList_l_r .del img{}
+.shopList .shopH2{font-size: 36px;font-weight: bold;margin-bottom: 40px;}
+.CartList_r{border: 1px solid #ddd;border-radius: 20px;padding: 30px 20px;width: 32%;}
+.CartList_r>h2{margin: 0;font-size: 24px;margin-bottom: 10px;}
+.CartList_r_c{}
+.CartList_r_c li{display: flex;align-items: center;justify-content: space-between;line-height: 0px;}
+.CartList_r_c li span{color: #252525A6;}
+.CartList_r_c li p{font-weight: bold;}
+.CartList_r .total{display: flex;justify-content: space-between;margin-top: 20px;}
+.CartList_r .total .total_l{color: #252525A6;font-weight: bold;font-size: 18px;}
+.CartList_r .total .total_r{font-weight: bold;}
+.CartList_l li:last-child{border:0;}
+.CartList_r .btn{background: #0052D9;color: #fff;height: 48px;line-height: 48px;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: 10px;margin-top: 20px;display: inline-block;width: 100%;}
+.ComCardMaskCon_b{color: #252525CC;background: #EBF0F6;border-radius: 10px;padding: 20px;margin-bottom: 40px;}
+/***********************1*************checkbox*******************************************************************/
+.form-container {
+    width: 96%;
+    /*! margin: 0 auto; */
+    padding: 30px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #6B7280;
+    background: transparent;
+}
+.phone-container {
+    display: flex;
+    align-items: center;
+    width: 103%;
+}
+.phone-container select {
+    /*! margin-right: 10px; */
+    width: 10%;
+}
+.card-details {
+    display: flex;
+    flex-direction: column;
+}
+.billing-address {
+    display: flex;
+    flex-direction: column;
+    width: 103%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.cardDList{border: 1px solid #ddd;border-radius: 10px;width: 103%;border-bottom: 0;}
+.cardDList_t{font-size: 14px;color: #6B7280;padding: 10px 20px;}
+.cardDList_b{display: flex;}
+.cardDList_b input{}
+.form-group .bom{font-size: 14px;padding: 10px 20px 0;color: #6B7280;}
+.addCardMaskList_b_b2:hover{background: #25252533;
+    color: #0052D9;}
+.cartWapAddList{display: none;}
 /* @media (min-width:1780px) {
 } */
 @media (min-width: 769px) and (max-width: 1220px) { 
@@ -332,7 +421,7 @@ footer{background: #252525;color: #fff;}
     .categotyList ul li img{width: 100%;}
     .ProList{padding: 0 20px;}
     .ProList ul{flex-wrap: wrap;}
-    .ProList ul li{margin-bottom: 20px;width: 45%;}
+    .ProList ul li{margin-bottom: 20px;width: 44%;}
     .ProList ul li img{height: 400px;}
     .footer_Computer {flex-wrap: wrap;padding: 40px 20px;}
     .footer1{width: 100%;display: flex;justify-content: center;align-items: center;}
@@ -344,6 +433,9 @@ footer{background: #252525;color: #fff;}
     }
     .shopDetailsM{flex-wrap: wrap;}
     .shopDetailsM_l{width: 100%;margin-bottom: 20px;}
+    .CartList{flex-wrap: wrap;}
+    .CartList_l{width: 100%;}
+    .CartList_r{width: 100%;margin-top: 20px;}
 }
 @media (min-width: 1024px) and (max-width: 1440px) { 
 }
@@ -495,7 +587,7 @@ footer{background: #252525;color: #fff;}
         width: 100%;
         height: 100%;
         background: rgba(0,0,0,0.5);
-        z-index: 998;
+        z-index: ;
         display: none;
     }
     
@@ -505,7 +597,7 @@ footer{background: #252525;color: #fff;}
     .wapShopList{display: block;padding: .3rem;position: relative;}
     .shopList{display: none;}
     .shopCateList{}
-    .shopCateList .cateName{display: flex;font-size: 14px;color: ;}
+    .shopCateList .cateName{display: flex;font-size: 14px;}
     .shopCateList span{color: #252525A6;display: flex;align-items: center;}
     .shopCateList span::after{content:"";background: url('../images/shop/c1.png');
         background-size: auto;
@@ -549,7 +641,7 @@ footer{background: #252525;color: #fff;}
         width: 100%;
         height: 100%;
         background: rgba(0,0,0,0.6);
-        z-index: 111;
+        z-index: 2222;
     }
     
     /* 关闭按钮样式调整 */
@@ -628,6 +720,7 @@ footer{background: #252525;color: #fff;}
     .wapShopList .shopSubBtn{width: 33.333%;text-align: center;font-size: 30px;cursor: pointer;}
     .wapShopList .checkBtn{background: #0052D9;color: #fff;height: 1rem;line-height: 1rem;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: .2rem;margin-top: .4rem;}
     .wapShopList .addBtn{}
+    .wapShopList .addBtn:hover{background: #25252533;color: #0052D9;}
     .wapShopList .addBtn{height: 1rem;border: 1px solid #0052D9;color: #0052D9;text-align: center;line-height: 1rem;border-radius: 30px;margin-bottom: .2rem;}
     .wapShopList .detail_b{}
     .wapShopList .detail_b p{font-size: 14px;margin-top: .1rem;margin-bottom: .8rem;}
@@ -656,7 +749,7 @@ align-items: center;
 justify-content: center;
 }
     .addCardMaskList> h2::before{content:"";background: url('../images/details/i11.png');width: .4rem;height: .4rem;display: inline-block;background-size: .4rem;margin-right: 10px;}
-    .addCardMaskList_t{display: flex;align-items: center;}
+    .addCardMaskList_t{display: flex;align-items: center;border-bottom: 1px solid #ddd;padding-bottom: .4rem;}
     .addCardMaskList_t_l{margin-right: .2rem;}
     .addCardMaskList_t_l img{}
     .addCardMaskList_t_r{}
@@ -670,7 +763,44 @@ justify-content: center;
     .addCardMask .disco{color: #FF3333;background: #ffeaea;border-radius: .2rem;height: .3rem;line-height: .3rem;font-size: 12px;padding: 0 .1rem;}
     .addCardMask .addCardMaskList_b{}
     .addCardMask .addCardMaskList_b_b1{background: #0052D9;color: #fff;height: 1rem;line-height: 1rem;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: .2rem;margin-top: .1rem;}
-    .addCardMask .addCardMaskList_b_b2{height: 1rem;border: 1px solid #0052D9;color: #0052D9;text-align: center;line-height: 1rem;border-radius: 30px;margin-bottom: .2rem;}
+    .addCardMask .addCardMaskList_b_b2{height: 1rem;border: 1px solid #0052D9;color: #0052D9;text-align: center;line-height: 1rem;border-radius: 30px;margin-bottom: .2rem;display: inline-block;width: 100%;}
     .ComCardMask{display: none;}
-    
+    .addCardMaskList_t_r_b{display: flex;align-items: center;justify-content: space-between;}
+    .addCardMaskList_t_r_b .del{display: flex;align-items: center;}
+    .addCardMaskList_t_r_b .del img{width: 80%;}
+    .addCardMaskList_t_r_b .shopAdd{width: 40%;height: .7rem;}
+    .addCardMaskList_t_r_b .shopAddBtn{}
+    .addCardMaskList_t_r_b input{}
+    .addCardMaskList_t_r_b .shopSubBtn{}
+    .cartWapAddList{display: block;}
+    .cartWapAddList{position: fixed;bottom: 0;background: #fff;z-index: 11;width: 90%;border-radius: 20px 20px 0 0;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);padding: .4rem;}
+    .cartWapAddList>h2{margin: 0;font-size: 20px;}
+    .cartWapAddList_t{border-bottom: 1px solid #ddd;}
+    .cartWapAddList_t li{display: flex;align-items: center;justify-content: space-between;margin: .2rem 0;}
+    .cartWapAddList_t li span{color: #252525A6;}
+    .cartWapAddList_t li p{margin: 0;font-weight: bold;}
+    .cartWapAddList_b{display: flex;align-items: center;justify-content: space-between;}
+    .cartWapAddList_b p{margin: 0;font-weight: bold;margin: .2rem 0;}
+    .cartWapAddList_b span{color: #252525A6;}
+    .cartWapAddList_btn{background: #0052D9;color: #fff;height: 1rem;line-height: 1rem;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: .2rem;margin-top: .2rem;display: inline-block;width: 100%;}
+    .wapCartList1{}
+    .form-container {padding: 0;
+    }
+    .form-group {
+    }
+    .form-group label {
+    }
+    .form-group input, .form-group select {
+      
+    }
+    .phone-container {
+    }
+    .phone-container select {  width: 25%;
+    }
+    .card-details {
+    }
+    .billing-address {
+    }
+    .Wap_Xian{height: .1rem;width: 40%;background: #000;border-radius: 20px;margin: 0 auto;margin-top: .3rem;margin-bottom: .2rem;}
+    .form_group_btn{background: #0052D9;color: #fff;height: 1rem;line-height: 1rem;text-align: center;border-radius: 30px;font-weight: bold;margin-bottom: .2rem;margin-top: .4rem;display: inline-block;width: 100%;}
 }
