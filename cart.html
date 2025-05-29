@@ -75,8 +75,10 @@
                 <li><a href="#">CONTACT US</a></li>
             </ul>
             <div class="searchList">
-                <div class="btn"></div>
-                <input type="text" placeholder="Search for products...">
+                <form id="searchForm">
+                    <div class="btn"></div>
+                    <input type="text" id="searchInput" placeholder="Search for products..." required>
+                </form>
                 <ul class="searchMask">
                     <li>Sony a6000</li>
                     <li>Fujifilm</li>
@@ -112,12 +114,14 @@
         </div>
     </header>
     <div class="WapMask">
-        <div class="searchList">
-            <div class="searchM">
-            <div class="btn"></div>
-            <input type="text" placeholder="Search">
+       <div class="searchList"  id="mobileSearchForm">
+                <form id="mobileSearchForm">
+                    <div class="searchM">
+                        <div class="btn"></div>
+                        <input type="text" id="mobileSearchInput" placeholder="Search" required>
+                    </div>
+                </form>
             </div>
-        </div>
         <ul>
             <h2>Recent Searches</h2>
             <li>Sony a6000</li>
@@ -299,8 +303,7 @@
             <div class="shopCateList">
                 <div class="cateName">
                     <span>Home</span>
-                    <span>Categoty</span>
-                    <div class="search">Canon R series</div>
+                    <div class="search">Cart</div>
                 </div>
             </div>
             <h2>My Cart</h2>
@@ -464,6 +467,7 @@
         </div> 
     </footer>
     <script src="./js/home.js"></script>
+    <script src="./js/main.js"></script>
     <script>
             document.querySelector('.shopCateList').addEventListener('click', function() {
                 document.querySelector('.WapCateMask').style.display = 'block';

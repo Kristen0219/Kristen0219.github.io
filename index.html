@@ -19,8 +19,10 @@
                 <li><a href="#">CONTACT US</a></li>
             </ul>
             <div class="searchList">
-                <div class="btn"></div>
-                <input type="text" placeholder="Search for products...">
+                <form id="searchForm">
+                    <div class="btn"></div>
+                    <input type="text" id="searchInput" placeholder="Search for products..." required>
+                </form>
                 <ul class="searchMask">
                     <li>Sony a6000</li>
                     <li>Fujifilm</li>
@@ -57,11 +59,13 @@
     </header>
     
     <div class="WapMask">
-            <div class="searchList">
-                <div class="searchM">
-                <div class="btn"></div>
-                <input type="text" placeholder="Search">
-                </div>
+            <div class="searchList"  id="mobileSearchForm">
+                <form id="mobileSearchForm">
+                    <div class="searchM">
+                        <div class="btn"></div>
+                        <input type="text" id="mobileSearchInput" placeholder="Search" required>
+                    </div>
+                </form>
             </div>
             <ul>
                 <h2>Recent Searches</h2>
@@ -300,5 +304,6 @@
         </div> 
     </footer>
     <script src="./js/home.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
