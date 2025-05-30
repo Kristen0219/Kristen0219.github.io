@@ -1,23 +1,23 @@
-/*电脑js    */
+/*Desktop JS    */
 document.addEventListener('DOMContentLoaded', function() {
-    // 电脑端搜索功能
+    // Desktop search functionality
     const searchInput = document.querySelector('.header_Computer .searchList input');
     const searchMask = document.querySelector('.header_Computer .searchMask');
     
     if (searchInput && searchMask) {
-        // 输入框交互
+        // Input field interaction
         searchInput.addEventListener('focus', function() {
             searchMask.classList.add('active');
         });
 
-        // 点击外部关闭
+        // Close on outside click
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.header_Computer .searchList')) {
                 searchMask.classList.remove('active');
             }
         });
 
-        // 输入时添加loading效果
+        // Show loading effect while typing
         searchInput.addEventListener('input', function() {
             searchMask.classList.add('searching');
             setTimeout(() => {
@@ -26,48 +26,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-/*手机js*/
-/*搜索*/
+/*Mobile JS*/
+/*Search*/
 document.addEventListener('DOMContentLoaded', function() {
-    // 移动端菜单切换功能
+    // Mobile menu toggle functionality
     const menuButton = document.querySelector('.header_Wap .header_Wap_l li:nth-child(2) img');
     const wapMask = document.querySelector('.WapMask');
     
     if (menuButton && wapMask) {
-        // 菜单按钮点击事件
+        // Menu button click event
         menuButton.addEventListener('click', function(e) {
             e.stopPropagation();
             
-            // 切换菜单状态
+            // Toggle menu state
             const isActive = wapMask.classList.contains('active');
             wapMask.classList.toggle('active', !isActive);
             document.body.style.overflow = isActive ? '' : 'hidden';
         });
 
     }
-    /*菜单*/
+    /*Menu*/
     const menuButton1 = document.querySelector('.header_Wap .header_Wap_l li:nth-child(1)');
     const menu = document.querySelector('.wapList');
     const mask = document.querySelector('.menu_mask');
 
-    // 切换菜单
+    // Toggle menu
     function toggleMenu() {
         menu.classList.toggle('active');
         mask.classList.toggle('active');
     }
 
-    // 菜单按钮点击
+    // Menu button click
     menuButton1.addEventListener('click', function(e) {
         e.stopPropagation();
         toggleMenu();
     });
 
-    // 点击遮罩关闭
+    // Close menu when clicking on overlay
     mask.addEventListener('click', function() {
         toggleMenu();
     });
 
-    // 点击菜单项关闭
+    // Close menu when clicking on a menu item
     menu.querySelectorAll('li').forEach(item => {
         item.addEventListener('click', function() {
             toggleMenu();

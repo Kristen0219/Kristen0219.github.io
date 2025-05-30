@@ -482,19 +482,19 @@
     <script src="./js/home.js"></script>
     <script src="./js/main.js"></script>
     <script>
-    /*手机CART*/
-    // 显示添加卡片遮罩层
+    /*Mobile CART*/
+    // Show the add-to-cart overlay
     document.querySelector('.detail_t .addBtn').addEventListener('click', function() {
         document.querySelector('.addCardMask').style.display = 'block';
     });
 
     document.querySelector('.addCardMaskList').addEventListener('click', function(e) {
-        // 计算关闭图标位置（根据CSS中的绝对定位位置）
+        // Calculate the position of the close icon (based on absolute positioning in CSS)
         const closeBtnRight = 15;
         const closeBtnTop = 10;
-        const iconSize = 40; // 根据实际图标尺寸调整
+        const iconSize = 40; // Adjust according to the actual icon size
         
-        // 检查点击位置是否在关闭图标区域内
+        // Check if the click position is within the close icon area
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -512,14 +512,14 @@
             this.style.display = 'none';
         }
     });
-    /*电脑Card*/
+    /*Desktop Card*/
     document.querySelector('.shopDetailsM_r .addBtn').addEventListener('click', function() {
         document.querySelector('.ComCardMask').style.display = 'block';
     });
 
-    // 点击遮罩层外部关闭
+    // Close the overlay when clicking outside
     document.querySelector('.ComCardMask').addEventListener('click', function(e) {
-        if (e.target === this) { // 确保点击的是遮罩层本身，而不是子元素
+        if (e.target === this) { // Ensure the clicked element is the overlay itself, not a child element
             this.style.display = 'none';
         }
     });
@@ -529,9 +529,9 @@
         document.querySelector('.WapCateMask').style.display = 'block';
     });
     
-    // 关闭筛选遮罩层（通过点击关闭按钮）
+    // Close the filter overlay (by clicking the close button)
     document.querySelector('.WapCateMaskList > h2').addEventListener('click', function(e) {
-        // 阻止事件冒泡
+        // Prevent event bubbling
         e.stopPropagation();
         document.querySelector('.WapCateMask').style.display = 'none';
     });

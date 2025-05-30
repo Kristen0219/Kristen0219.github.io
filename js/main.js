@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     
     searchForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // 阻止表单默认提交行为
+        e.preventDefault(); // Prevent default form submission behavior
         
         const searchTerm = searchInput.value.trim();
         
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // 跳转到shop.html并传递搜索参数
+        // Redirect to shop.html with search parameters
         window.location.href = `shop.html?search=${encodeURIComponent(searchTerm)}`;
     });
 });

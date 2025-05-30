@@ -250,14 +250,14 @@
     <script src="./js/home.js"></script>
     <script src="./js/main.js"></script>
     <script>
-    /*电脑Card*/
+    /*Desktop Card*/
     document.querySelector('.CartList_r .btn').addEventListener('click', function() {
         document.querySelector('.ComCardMask').style.display = 'block';
     });
 
-    // 点击遮罩层外部关闭
+    // Close overlay when clicking outside
     document.querySelector('.ComCardMask').addEventListener('click', function(e) {
-        if (e.target === this) { // 确保点击的是遮罩层本身，而不是子元素
+        if (e.target === this) { // Ensure the clicked element is the overlay itself, not a child
             this.style.display = 'none';
         }
     });
@@ -267,9 +267,9 @@
                 document.querySelector('.WapCateMask').style.display = 'block';
             });
             
-            // 关闭筛选遮罩层（通过点击关闭按钮）
+            // Close the filter overlay (by clicking the close button)
             document.querySelector('.WapCateMaskList > h2').addEventListener('click', function(e) {
-                // 阻止事件冒泡
+                // Prevent event bubbling
                 e.stopPropagation();
                 document.querySelector('.WapCateMask').style.display = 'none';
             });

@@ -473,9 +473,9 @@
                 document.querySelector('.WapCateMask').style.display = 'block';
             });
             
-            // 关闭筛选遮罩层（通过点击关闭按钮）
+            // Close the filter overlay (by clicking the close button)
             document.querySelector('.WapCateMaskList > h2').addEventListener('click', function(e) {
-                // 阻止事件冒泡
+                // Prevent event bubbling
                 e.stopPropagation();
                 document.querySelector('.WapCateMask').style.display = 'none';
             });

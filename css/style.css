@@ -120,12 +120,12 @@ footer{background: #252525;color: #fff;}
 .homeBanner_Wap{display: none;}
 /* .WapMask{ display: none;} */
 .header_Computer .searchMask {
-    display: block; /* 改为始终存在 */
+    display: block; /* Make it always visible */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease-in-out;
-    /* 其他原有样式保持不变 */
+    /* Keep all other original styles unchanged */
 }
 
 .header_Computer .searchMask.active {
@@ -134,7 +134,7 @@ footer{background: #252525;color: #fff;}
     transform: translateY(0);
 }
 
-/* 添加搜索建议项的悬停动画 */
+/* Add hover animation for search suggestion items */
 .header_Computer .searchMask li {
     transition: transform 0.2s ease;
 }
@@ -198,30 +198,30 @@ footer{background: #252525;color: #fff;}
 .pageList_c ul .hover{border-top: 2px solid #0052D9E5;color: #0052D9E5;}
 .shopM{display: flex;}
 .shopList_r_t_r select {
-    -webkit-appearance: none; /* 移除默认样式 */
+    -webkit-appearance: none; /* Remove default styles */
     -moz-appearance: none;
     appearance: none;
     background: transparent url('../images/shop/c2.png') no-repeat 95% center;
     background-size: 12px;
-    padding-right: 25px; /* 给图标留出空间 */
+    padding-right: 25px; /* Leave space for the icon */
     border: none;
-    color: inherit; /* 继承父元素颜色 */
+    color: inherit; /* Inherit color from parent element */
     cursor: pointer;
     outline: none;
 }
 
-/* 设置默认值 */
+/* Set default value */
 .shopList_r_t_r select option[selected] {
-    display: none; /* 隐藏默认占位符 */
+    display: none; /* Hide default placeholder */
 }
 
-/* 设置选项样式 */
+/* Style dropdown options */
 .shopList_r_t_r select option {
     background: #fff;
     color: #333;
 }
 
-/* 兼容Firefox */
+/* Compatible with Firefox */
 @-moz-document url-prefix() {
     .shopList_r_t_r select {
         padding-right: 5px;
@@ -231,7 +231,7 @@ footer{background: #252525;color: #fff;}
     }
 }
 
-/* 兼容Edge */
+/* Compatible with Edge */
 @supports (-ms-ime-align:auto) {
     .shopList_r_t_r select {
         padding-right: 25px;
@@ -415,7 +415,7 @@ footer{background: #252525;color: #fff;}
 .form-group select{width: 100%;}
 .homeBanner_r {
     position: relative;
-    display: inline-block; /* 确保伪元素能正确覆盖 */
+    display: inline-block; /* Ensure the pseudo-element properly overlays the target */
 }
 
 /* .homeBanner_r::before {
@@ -566,10 +566,10 @@ footer{background: #252525;color: #fff;}
     .bomList .disco{font-size: 14px;color: #FF3333;background: #ffeaea;border-radius: .2rem;padding: 0 .1rem;height: .3rem;line-height: .3rem;font-size: 12px;}
     .header_Wap {
         position: relative;
-        z-index: 101; /* 确保按钮在菜单上方 */
+        z-index: 101; /* Ensure the button is above the menu */
     }
     
-    /* 修改菜单动画 */
+    /* Modify the menu animation */
     .WapMask {
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
@@ -609,7 +609,7 @@ footer{background: #252525;color: #fff;}
         font-weight: bold;
     }
     
-    /* 遮罩层 */
+    /* Overlay layer */
     .menu_mask {
         position: fixed;
         top: 0;
@@ -664,7 +664,7 @@ footer{background: #252525;color: #fff;}
     .WapCateMaskList_l li{font-size: 16px;padding: .1rem .4rem;}
     .WapCateMaskList_l:last-child{border:0;}
     .WapCateMask {
-        display: none; /* 默认隐藏 */
+        display: none; /* Hidden by default */
         position: fixed;
         top: 0;
         left: 0;
@@ -674,7 +674,7 @@ footer{background: #252525;color: #fff;}
         z-index: 2222;
     }
     
-    /* 关闭按钮样式调整 */
+    /* Adjust close button styles */
     .WapCateMaskList > h2::after {
         content: "";
         background: url('../images/shop/c5.png') no-repeat;
@@ -682,7 +682,7 @@ footer{background: #252525;color: #fff;}
         height: 0.4rem;
         background-size: 0.4rem;
         cursor: pointer;
-        /* 确保伪元素可点击 */
+        /* Ensure pseudo-elements are clickable */
         pointer-events: auto;
     }
     .sortCateList{position: absolute;background: #fff;border: 1px solid #ddd;border-radius: 20px;width: 4rem;top: 125px;}
@@ -699,11 +699,11 @@ footer{background: #252525;color: #fff;}
         margin-right: .2rem;
     }
     .sortCateList {
-        display: none; /* 默认隐藏 */
+        display: none; /* Hidden by default */
         position: absolute;
         left: 0.3rem;
         right: 0.3rem;
-        top: 1.8rem; /* 根据实际按钮位置调整 */
+        top: 1.8rem; /* Adjust based on the actual button position */
         background: #fff;
         box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.1);
         z-index: 100;
@@ -854,5 +854,5 @@ width: 100%;
     .addCardMaskList_b_b1{height: 1rem;line-height: 1rem;margin-top: 0;margin-bottom: .2remauto;}
     .addCardMaskList_b_b2{height: 1rem;line-height: 1rem;margin-bottom: .2rem;}
     
-    .WapMask .searchList .btn{left: .4rem;}
+    .WapMask .searchList .bStn{left: .4rem;}
 }

@@ -508,40 +508,40 @@
         document.querySelector('.WapCateMask').style.display = 'block';
     });
     
-    // 关闭筛选遮罩层（通过点击关闭按钮）
+    // Close the filter overlay (by clicking the close button)
     document.querySelector('.WapCateMaskList > h2').addEventListener('click', function(e) {
-        // 阻止事件冒泡
+        // Prevent event bubbling
         e.stopPropagation();
         document.querySelector('.WapCateMask').style.display = 'none';
     });
     
-    // 点击遮罩层其他区域不关闭（若需要点击其他区域关闭可移除stopPropagation）
+    // Do not close when clicking other areas of the overlay (remove stopPropagation to allow outside click)
     document.querySelector('.WapCateMask').addEventListener('click', function(e) {
         e.stopPropagation();
     });
     </script>
     <script>
-    // 筛选菜单切换逻辑
+    // Filter menu toggle logic
     const filterBtn = document.querySelector('.wapShopList .sortList li:nth-child(1)');
     const filterMenu = document.querySelector('.sortCateList');
     
-    // 初始化隐藏菜单
+    // Initially hide the menu
     filterMenu.style.display = 'none';
     
     filterBtn.addEventListener('click', function(e) {
-        e.stopPropagation(); // 阻止事件冒泡
+        e.stopPropagation(); // Prevent event bubbling
         const isVisible = filterMenu.style.display === 'block';
         filterMenu.style.display = isVisible ? 'none' : 'block';
     });
     
-    // 点击其他区域关闭菜单
+    // Close the menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!filterMenu.contains(e.target)) {
             filterMenu.style.display = 'none';
         }
     });
     
-    // 防止菜单内部点击触发关闭
+    // Prevent internal menu clicks from triggering close
     filterMenu.addEventListener('click', function(e) {
         e.stopPropagation();
     });
@@ -551,9 +551,9 @@
                     document.querySelector('.WapCateMask').style.display = 'block';
                 });
                 
-                // 关闭筛选遮罩层（通过点击关闭按钮）
+                // Close the filter overlay (by clicking the close button)
                 document.querySelector('.WapCateMaskList > h2').addEventListener('click', function(e) {
-                    // 阻止事件冒泡
+                    // Prevent event bubbling
                     e.stopPropagation();
                     document.querySelector('.WapCateMask').style.display = 'none';
                 });
